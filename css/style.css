@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -26,6 +27,7 @@ header {
     font-size: 20px;
 
 }
+
 
 
 .offer-banner {
@@ -71,6 +73,11 @@ nav a {
     border-radius: 4px;
     transition: background-color 0.3s;
 }
+.profile{
+    color: black;
+    margin-left: 20px;
+    
+}
 
 .anchor-home {
     color: green;
@@ -85,19 +92,40 @@ nav a:hover {
 }
 
 .search{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-container{
+    display: flex;
+    margin-right: 30%;
+    position: relative;
 }
 
 .search-container input {
+    display: block;
     padding: 5px;
     border: none;
     border-radius: 8px;
-    width: 500px;
+    width: 450px;
+    margin:0 ;
+  
 }
-.carousel-inner img{
-    object-fit: cover;
+.search-container button{
+   border: none;
+   max-width: max-content;
+   max-height: max-content;
+   position: absolute;
+   top: 6px;
+   right: 0;
+   left: 69%;
+   border-radius: 8px;
+   background-color:white;
+   
 
 }
+
+
 .wrapper{
     max-width: 1200px;
     cursor: pointer;
@@ -118,39 +146,67 @@ nav a:hover {
     width: 100%;
 
 }
-.grab{
+.grab,.new,.bestsell,.shop-ing{
     background: linear-gradient(100deg,white,rgb(255, 166, 0));
     color: red;
     padding: 15px;
     margin-top: 20px;
-    font-size: 20px;
-    font-weight: 1000;
+    font-weight: 600;
     text-align: center;
 }
-.card-details{
+.grab-card,.parent-card,.ing-card{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
-    gap: 20px;
+    gap:10px;
 }
-.card-text{
+.card-text,.cards-text{
     font-size: 14px;
     font-weight: 450;
     
 }
-.btn-color{
-    width: 100%;
-    border: none;
-    background-color: lightpink;
-    
-}
-.card{
-    margin-top: 20px;
-    text-align: center;
-    
 
+.card{
+    margin: 20px;
     
 }
+.pic img{
+    width: 100%;
+    height: 50vh;
+}
+.view button{
+    width: 200px;
+    height: 7vh;
+    
+    background-color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
+    box-shadow: 4px 4px 6px grey;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+.view{
+    text-align: center;
+}
+.cards-child{
+    max-width:max-content;
+    border: orange 2px solid;
+    border-radius: 50%;
+    padding: 30px;
+}
+.ing-card{
+    gap: 30px;
+    margin: 20px;
+}
+.cards{
+    text-align: center;
+}
+.quoats h3{
+    font-style: italic;
+}
+
+
+
 
 
 
