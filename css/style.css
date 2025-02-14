@@ -94,6 +94,8 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin: 8px 12px;
+    padding: 20px;
 }
 
 .search-container {
@@ -146,9 +148,12 @@ nav a:hover {
     font-weight: 600;
     text-align: center;
 }
+
 .grabcard-details,
 .offer-section,
-.newcard-details,.ingredients {
+.newcard-details,
+.ingredients,
+.blog-section {
     overflow: hidden;
     background: white;
     padding: 20px;
@@ -156,7 +161,8 @@ nav a:hover {
 }
 
 .grab-card,
-.newparent-card,.ingparent-card {
+.newparent-card,
+.ingparent-card {
     display: flex;
     gap: 20px;
     overflow-x: auto;
@@ -165,27 +171,32 @@ nav a:hover {
     cursor: grab;
     transition: transform 0.3s ease-out;
 }
+
 .ingcard-child {
     flex: 0 0 auto;
     width: 200px;
     padding: 10px;
-    
+
     text-align: center;
     border-radius: 10px;
 }
+
 .circle-img img {
-    width: 100%; 
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
-.circle-img{
+
+.circle-img {
     text-align: center;
     padding: 25px;
     border: 2px solid orangered;
     border-radius: 50%;
 
 }
-.wrapper {
+
+.wrapper,
+.blog-wrapper {
     display: flex;
     overflow: hidden;
     width: 100%;
@@ -193,14 +204,16 @@ nav a:hover {
     cursor: grab;
 }
 
-.carousel {
+.carousel,
+.blog-carousel {
     display: flex;
     gap: 20px;
     transition: transform 0.3s ease-out;
 }
 
-.carousel img {
-    width: 300px;
+.carousel img,
+.blog-carousel img {
+    width: 250px;
     height: auto;
     border-radius: 10px;
     user-select: none;
@@ -250,6 +263,7 @@ nav a:hover {
     background: linear-gradient(10deg, rgb(255, 217, 172), rgb(180, 68, 68));
 
 }
+
 .newcard-child img {
     width: 100%;
     height: auto;
@@ -257,7 +271,7 @@ nav a:hover {
 }
 
 .newshops-btn button {
-    background-color:rgb(254, 174, 68);
+    background-color: rgb(254, 174, 68);
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
@@ -267,8 +281,8 @@ nav a:hover {
     font-weight: 850;
 }
 
-.newshops-btn button:hover {
-    background-color: 	rgb(144, 238, 144);
+.newshops-btn button:hover,.faq:hover{
+    background-color: rgb(144, 238, 144);
 }
 
 .newcard-text {
@@ -294,7 +308,8 @@ nav a:hover {
     border-radius: 5px;
 
 }
-.cards-text{
+
+.cards-text {
     font-size: 20px;
     font-weight: 600;
 }
@@ -302,14 +317,23 @@ nav a:hover {
 .view {
     text-align: center;
 }
+
 .ld,
 .derma-child {
     text-align: center;
 }
 
+.quoats {
+    background: url(https://stock.adobe.com/search?k=%22horizontal+background%22);
+}
+
+
 .quoats h3 {
     font-family: "Sofia", sans-serif;
     text-align: center;
+    font-size: 30px;
+    padding: 10px;
+
 
 }
 
@@ -417,4 +441,195 @@ nav a:hover {
     width: 30px;
     margin: 0 5px;
 
+}
+
+.about {
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    padding: 10px;
+    font-weight: 700;
+    color: #333;
+}
+
+.about-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 510;
+    padding: 10px;
+}
+
+.about-links {
+    background-color: #ffe3be;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    align-items: center;
+}
+
+.text {
+    width: 50%;
+    text-align: left;
+}
+
+.text h3 {
+    font-size: 25px;
+    color: brown;
+    padding: 30px;
+    text-align: center;
+}
+
+.text p {
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.faq-section h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.faq-container {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    
+}
+.faq {
+    border-bottom: 2px solid #f4d4aa;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #fbe9d0;
+    margin-bottom: 50px;
+    border-radius: 8px; 
+}
+
+
+.faq-header{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.answer {
+    display: none;
+    background: white; 
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.faq.active {
+    background: white;
+}
+
+.faq.active .faq-header {
+    background: white;
+}
+.click-view{
+    text-align: center;
+}
+.click-view button{
+    background-color:tomato;
+    padding: 10px;
+    width: 150px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700px;
+    margin-top: 20px;
+}
+.banner {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to right, #ffcc80, #ff7043);
+    padding: 40px;
+    color: #4a2c2a;
+    border-radius: 10px;
+}
+
+.banner h1 {
+    font-size: 58px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.banner h1 span {
+    color: #e65100;
+    font-weight: 1000;
+    font-size: 80px;
+}
+
+.banner-image img {
+    width: 300px;
+    border:none;
+    background: none;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:40px;
+    padding: 20px;
+}
+
+.product {
+    position: relative; 
+    width: 300px;  
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff7f50;
+    display: block;
+}
+
+.product button {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px; 
+    padding: 10px;
+    border: none;
+    background-color: #ff7f50;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase; 
+    font-weight: bold;
+}
+
+.product button:hover {
+    background-color: #ff4500;
 }

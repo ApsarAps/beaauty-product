@@ -25,7 +25,7 @@ document.querySelectorAll(".newparent-card").forEach((cardSlider) => {
         if (!isMouseDown) return;
         event.preventDefault();
         const currentX = event.pageX - cardSlider.offsetLeft;
-        const moveDistance = (currentX - startPosition) * 2; // Adjust scrolling speed
+        const moveDistance = (currentX - startPosition) * 2;
         cardSlider.scrollLeft = initialScroll - moveDistance;
     });
 });
@@ -61,34 +61,38 @@ slider.addEventListener("mousemove", (e) => {
     slider.scrollLeft = scrollLeft - walk;
 });
 
-const carousel = document.querySelector(".wrapper");
-let isDragging = false;
-let startY, scrollLeft1;
+document.querySelectorAll(".wrapper").forEach((cardSlider) => {
+    let isMouseDown = false;
+    let startPosition;
+    let initialScroll;
 
-carousel.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    startX = e.pageX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
-    carousel.style.cursor = "grabbing";
+    cardSlider.addEventListener("mousedown", (event) => {
+        isMouseDown = true;
+        cardSlider.classList.add("active");
+        startPosition = event.pageX - cardSlider.offsetLeft;
+        initialScroll = cardSlider.scrollLeft;
+    });
+
+    cardSlider.addEventListener("mouseleave", () => {
+        isMouseDown = false;
+        cardSlider.classList.remove("active");
+    });
+
+    cardSlider.addEventListener("mouseup", () => {
+        isMouseDown = false;
+        cardSlider.classList.remove("active");
+    });
+
+    cardSlider.addEventListener("mousemove", (event) => {
+        if (!isMouseDown) return;
+        event.preventDefault();
+        const currentX = event.pageX - cardSlider.offsetLeft;
+        const moveDistance = (currentX - startPosition) * 2;
+        cardSlider.scrollLeft = initialScroll - moveDistance;
+    });
 });
 
-carousel.addEventListener("mouseleave", () => {
-    isDragging = false;
-    carousel.style.cursor = "grab";
-});
 
-carousel.addEventListener("mouseup", () => {
-    isDragging = false;
-    carousel.style.cursor = "grab";
-});
-
-carousel.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 2;
-    carousel.scrollLeft = scrollLeft - walk;
-});
 
 
 
@@ -118,9 +122,7 @@ document.querySelectorAll(".ingparent-card").forEach((cardSlider) => {
         if (!isMouseDown) return;
         event.preventDefault();
         const currentX = event.pageX - cardSlider.offsetLeft;
-        const moveDistance = (currentX - startPosition) * 2; // Adjust scrolling speed
+        const moveDistance = (currentX - startPosition) * 2;
         cardSlider.scrollLeft = initialScroll - moveDistance;
     });
 });
-
-
