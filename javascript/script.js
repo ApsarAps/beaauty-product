@@ -126,3 +126,6 @@ document.querySelectorAll(".ingparent-card").forEach((cardSlider) => {
         cardSlider.scrollLeft = initialScroll - moveDistance;
     });
 });
+
+
+

@@ -42,3 +42,56 @@ function toggleFAQ(element) {
         answer.style.display = "block";  
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const wishlistIcons = document.querySelectorAll(".wishlist-icon");
+
+    wishlistIcons.forEach(icon => {
+        icon.addEventListener("click", function () {
+            if (icon.style.fill === "red") {
+                icon.style.fill = "currentColor"; // Default color (black)
+            } else {
+                icon.style.fill = "red"; // Change to red when clicked
+            }
+        });
+    });
+});
+const slider = document.querySelector('.product-list');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+// Mouse drag functionality
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // Speed multiplier
+    slider.scrollLeft = scrollLeft - walk;
+});
+
+// Navigation Buttons
+document.querySelector('.prev').addEventListener('click', () => {
+    slider.scrollLeft -= 300; // Adjust scrolling step
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    slider.scrollLeft += 300; // Adjust scrolling step
+});
