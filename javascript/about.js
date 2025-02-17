@@ -24,7 +24,7 @@ document.querySelectorAll(".blog-wrapper").forEach((cardSlider) => {
         if (!isMouseDown) return;
         event.preventDefault();
         const currentX = event.pageX - cardSlider.offsetLeft;
-        const moveDistance = (currentX - startPosition) * 2;
+        const moveDistance = (currentX - startPosition) * 1     ;
         cardSlider.scrollLeft = initialScroll - moveDistance;
     });
 });
@@ -43,25 +43,12 @@ function toggleFAQ(element) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const wishlistIcons = document.querySelectorAll(".wishlist-icon");
-
-    wishlistIcons.forEach(icon => {
-        icon.addEventListener("click", function () {
-            if (icon.style.fill === "red") {
-                icon.style.fill = "currentColor"; // Default color (black)
-            } else {
-                icon.style.fill = "red"; // Change to red when clicked
-            }
-        });
-    });
-});
 const slider = document.querySelector('.product-list');
 let isDown = false;
 let startX;
 let scrollLeft;
 
-// Mouse drag functionality
+
 slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
@@ -83,15 +70,13 @@ slider.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; // Speed multiplier
+    const walk = (x - startX) * 1; 
     slider.scrollLeft = scrollLeft - walk;
 });
 
-// Navigation Buttons
-document.querySelector('.prev').addEventListener('click', () => {
-    slider.scrollLeft -= 300; // Adjust scrolling step
-});
 
-document.querySelector('.next').addEventListener('click', () => {
-    slider.scrollLeft += 300; // Adjust scrolling step
-});
+
+
+
+
+

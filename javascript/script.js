@@ -25,7 +25,7 @@ document.querySelectorAll(".newparent-card").forEach((cardSlider) => {
         if (!isMouseDown) return;
         event.preventDefault();
         const currentX = event.pageX - cardSlider.offsetLeft;
-        const moveDistance = (currentX - startPosition) * 2;
+        const moveDistance = (currentX - startPosition) * 1;
         cardSlider.scrollLeft = initialScroll - moveDistance;
     });
 });
@@ -57,7 +57,7 @@ slider.addEventListener("mousemove", (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
+    const walk = (x - startX) * 1;
     slider.scrollLeft = scrollLeft - walk;
 });
 
@@ -87,7 +87,7 @@ document.querySelectorAll(".wrapper").forEach((cardSlider) => {
         if (!isMouseDown) return;
         event.preventDefault();
         const currentX = event.pageX - cardSlider.offsetLeft;
-        const moveDistance = (currentX - startPosition) * 2;
+        const moveDistance = (currentX - startPosition) * 1;
         cardSlider.scrollLeft = initialScroll - moveDistance;
     });
 });
@@ -122,10 +122,11 @@ document.querySelectorAll(".ingparent-card").forEach((cardSlider) => {
         if (!isMouseDown) return;
         event.preventDefault();
         const currentX = event.pageX - cardSlider.offsetLeft;
-        const moveDistance = (currentX - startPosition) * 2;
+        const moveDistance = (currentX - startPosition) * 1;
         cardSlider.scrollLeft = initialScroll - moveDistance;
     });
 });
+
 
 
 
