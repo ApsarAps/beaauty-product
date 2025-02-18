@@ -73,27 +73,69 @@
 
             </nav>
         </div>
-
-
     </header>
-        <h1 class="wishlist-title">YOUR CART</h1>
-        <div class="pincode-box">
-            <input type="text" placeholder="Enter Pincode">
-            <button>Check</button>
+        <h1 class="wishlist-title">CHECKOUT</h1>
+        <hr>
+        <div class="shipping-info">
+            <h3>Shipping Information</h3>
+            
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="full-name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                </div>
+            
+                <div class="input-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+            
+                <div class="input-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                </div>
+            
+                <div class="input-group">
+                    <label for="city">City <span class="required">*</span></label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                </div>
+            
+                <div class="input-group">
+                    <label for="state">State <span class="required">*</span></label>
+                    <input type="text" id="state" name="state" placeholder="Enter your state" required>
+                </div>
+            
+                <div class="input-group-row">
+                    <div class="input-group">
+                        <label for="country">Country <span class="required">*</span></label>
+                        <input type="text" id="country" name="country" placeholder="India" required>
+                    </div>
+            
+                    <div class="input-group">
+                        <label for="zip">Pin Code <span class="required">*</span></label>
+                        <input type="text" id="zip" name="zip" placeholder="Eg: 623421" required>
+                    </div>
+                </div>
+            
+                <div class="input-group">
+                    <label for="landmark">Nearby Landmark (Optional)</label>
+                    <input type="text" id="landmark" name="landmark" placeholder="">
+                </div>
+            
+                <p>
+                    <input type="radio" name="save-info" value=""> Save the information for next time
+            
+            
         </div>
-        <p class="delivery-text">Check your delivery time</p>
-        <div class="pincodes-box">
-            <p class="delivery-text">Offers Available(7)</p>
-            <button>View All</button>
-        </div>
+        <hr>
+        
+        <h2 class="delivery-texts">Review Your Order</h2>
         <div class="wishlist-item">
             <img src="images/Beauty products/Body lotion/2.png" alt="NIVEA Rose Water Gel">
             <div class="product-info">
                 <p class="product-name">NIVEA Rose Water Gel Body Lotion, Soothing Care for 24H Hydration</p>
-                <p class="product-price">Rs: <b>200</b> <span class="strike">500</span> <span class="discount">20%
-                        OFF</span></p>
+                <p class="product-price">Rs: <b>200</b></p>
                 <p class="product-qty">Qty: 1</p>
-                 <button class="add-to-cart" onclick="addToCart(this)">Add To Cart</button>
             </div>
         </div>
 
@@ -102,14 +144,9 @@
                 alt="Mamaearth Vitamin C Face Wash">
             <div class="product-info">
                 <p class="product-name">Mamaearth Vitamin C Face Wash with Vitamin C and Turmeric 100ml</p>
-                <p class="product-price">Rs: <b>200</b> <span class="strike">500</span> <span class="discount">20%
-                        OFF</span></p>
+                <p class="product-price">Rs: <b>200</b></p>
                 <p class="product-qty">Qty: 1</p>
-                <button class="add-to-cart" onclick="addToCart(this)">Add To Cart</button>
             </div>
-        </div>
-        <div class="pincodes-box1">
-            <button>Apply promo code</button>
         </div>
         <div class="payment-section">
             <h3>Price Details</h3>
@@ -135,92 +172,13 @@
                 <p>Order Total</p>
                 <p>Rs: 350</p>
             </div>
+            <div class="checkout-button">
+                <button ><a href="orderplaced.html">Place Order</a></button>
+            </div>
+            
                
         </div>
-        <div class="checkout-button">
-            <button ><a href="checkout.html">Checkout</a></button>
-        </div>
        
-   
-        
-        <h2 class="continue-shopping">Continue Shopping</h2>
-        <div class="product-list">
-
-            <div class="product-card">
-                <div class="wishlist">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-heart wishlist-icon" viewBox="0 0 16 16">
-                        <path
-                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                    </svg>
-                </div>
-                <img src="images/Beauty products/Skin type/6.png" alt="Sunscreen SPF50">
-                <h2>Sunscreen SPF50, <br>UVA++ .50ml</h2>
-                <p>Rs:100</p>
-                <button class="cart-button">Add To Cart</button>
-            </div>
-
-            <div class="product-card">
-                <div class="wishlist">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-heart wishlist-icon" viewBox="0 0 16 16">
-                        <path
-                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                    </svg>
-                </div>
-                <img src="images/Beauty products/Skin type/7.png" alt="Golden Glow Serum">
-                <h2>Golden Glow Serum 50ml</h2>
-                <p>Rs:200</p>
-                <button class="cart-button">Add To Cart</button>
-            </div>
-
-            <div class="product-card">
-                <div class="wishlist">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-heart wishlist-icon" viewBox="0 0 16 16">
-                        <path
-                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                    </svg>
-                </div>
-                <img src="images/Beauty products/Skin type/8.png" alt="Cetaphil Lip Balm">
-                <h2>Cetaphil Lip Balm <br> with SPF <br></h2>
-                <p>Rs:300</p>
-                <button class="cart-button">Add To Cart</button>
-            </div>
-            <div class="product-card">
-                <div class="wishlist">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-heart wishlist-icon" viewBox="0 0 16 16">
-                        <path
-                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                    </svg>
-                </div>
-                <img src="images/Beauty products/Skin type/9.png" alt="Sunscreen SPF50">
-                <h2>Vaseline Lip therapy</h2>
-                <p>Rs:100</p>
-                <button class="cart-button">Add To Cart</button>
-            </div>
-            <div class="product-card">
-                <div class="wishlist">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-heart wishlist-icon" viewBox="0 0 16 16">
-                        <path
-                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                    </svg>
-                </div>
-                <img src="images/Beauty products/Skin type/10.png" alt="Sunscreen SPF50">
-                <h2>Berries Extract Serum <br>100ml</h2>
-                <p>Rs:100</p>
-                <button class="cart-button">Add To Cart</button>
-            </div>
-        </div>
-        <div class="newsletter">
-            <h2>Subscribe to our Newsletter</h2>
-            <div class="newsletter-input">
-                <input type="email" placeholder="Your Email address">
-                <button>Subscribe</button>
-            </div>
-        </div>
 
         <section class="footer">
             <div class="footer-content">

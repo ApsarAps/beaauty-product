@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const signInPage = document.getElementById('signInPage');
     const signUpPage = document.getElementById('signUpPage');
-    
     document.getElementById('showSignUp').addEventListener('click', function(event) {
         event.preventDefault(); 
         signInPage.style.display = 'none'; 
